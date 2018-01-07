@@ -23,9 +23,9 @@ int main(int argc, char **argv) {
     model.add(ctr1);
     model.add(ctr2);
 
-    cplex.exportModel("test.lp");
+    cplex.exportModel("/Users/martin/CLionProjects/Optimization/test.lp");
     cplex.solve();
-    cplex.writeSolution("sol.txt");
+    cplex.writeSolution("/Users/martin/CLionProjects/Optimization/sol.txt");
 
     std::cout << " Objectif = " << cplex.getObjValue() << std::endl;
     std::cout << " X1 = " << cplex.getValue(x1) << std::endl;
